@@ -5,14 +5,15 @@
 + all the organizational stuff
     - eAMS
     - devices and books
-    - rules<br />
+    - rules
+  
     1. punctuality
     2. cleanliness / hygiene / neatness
     3. friendly treatment
     4. helpfulness
     5. understanding
     6. break together / fresh air
-   <br />
+    
 + resume
     - writen in markdown
     - uploaded with Gitkraken
@@ -25,3 +26,6 @@
 
 ---
 ## 25.08.2020
+
++ ALU foundation
+    - AQUA
