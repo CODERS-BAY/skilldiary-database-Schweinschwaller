@@ -19,53 +19,52 @@
     - uploaded with Gitkraken
 + GitKraken
     - mylife
-    - skildiary  
+    - skilldiary  
 + Markdown
     - see readme.md
     - https://markdown-it.github.io/
 
 ---
-## Tuesday 25.08.2020
-
-+ html, CSS, javascript basic<br>
-difference between coding language and script language<br>
-coding language checks the whole program<br>
-a script language goes step on step without checking the whole program
-html defined the elements on the side
-css set the design, like color, size, placemant, ...
-
-+ ALU foundation
-    - AQUA
-
-+ html basic structur:
-    - head (invisible data)
-    - body (visible data)
-    
-+ body
-    - header (nav)
-    - main
-    - footer
-
-> main
->>article
->>>section
->>>>h1 and/or p
-
-
-+ css:
-    - margin is the distance around a element
-    - padding is the distance of the inside of a element => is part of the element
-
-+ css: box model https://css-tricks.com/box-sizing/
-    - content-box ( content-box is the default in css )
-    - border-box ( is better )
-
-+ css: @media only screen and (max-width: 530px)
-== when screen max-width <= 530px then:
-
-+ rem is a size unit based on the root font-size
-
-+ em is a size unit based on the local font-size
-
----
 ## Wednesday 26.08.2020
+
+DB have to fulfill 9 rules
+
++ Integration
+    - datamanagment is not redundant
++ Operation
+    - save, search, change, paste
++ Cataklog
+    - datainfos means metadaten
++ Recognition views
+    - rights (admin, user, poweruser)
++ Integrity assurance
+    - the data don't get corrupted
++ Access control
+    - yeah rights again
++ Transactions
+    - put some operations together. so they get alle down or none of them
++ Synchronization
+    - more then one person can work with the databank
++ Datensicherung
+    - backup
+
+Data modeling
+
+To get scheme use this 4 kinds
+
+Relationship is a rout
+Entity is a box
+attribut is eclise
+and by the key attribut is the text underlined
+
+there are 4 Cardinality 
+1:1, 1:N, N:1, M:N
+
+example: rental car 
+
+a rental car have more then one driver and a driver can have more then one car => the Entiy driver have a Relationship rent for the entiy car with a Cardinality of M:N
+
+DB have a loot of datatyps google it if u need to
+
+
+
