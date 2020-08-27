@@ -64,7 +64,14 @@ example: rental car
 
 a rental car have more then one driver and a driver can have more then one car => the Entiy driver have a Relationship rent for the entiy car with a Cardinality of M:N
 
-DB have a loot of datatyps google it if u need to
+DB have a loot of datatyps google it if u need to<br>
+importan is that string in DB is varchar!
+timestamp is a date<br>
+(int,double,...)
 
+if you have 3 entiy that stays in relationship do the cardinality in that order Left->Button Left->Rigth Rigth->button
 
+a entiy can have a relationship to it self. <br>
+example a student is responsible for it self.
 
+Relationships can also have attibutes
