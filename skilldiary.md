@@ -128,4 +128,7 @@ In the third normal form the attibutes that not keys are independently to each o
 
 ---
 ## Wednesday 9.09.2020
-Bei einer 1 zu N beziehung steht der Schlüssel von(1) als Fremdschlüssel in (N)
+
+At a 1 to N relationship you can have to put the primekey form the (1)side in the (N)side as Foreign key 
+
+if you Assiatative tabel a tabel you can use the 2 Foreign key as prime key 
