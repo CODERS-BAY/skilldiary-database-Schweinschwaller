@@ -126,3 +126,6 @@ By the secound normal form the attibutes respectively to the keyattibute.
 
 In the third normal form the attibutes that not keys are independently to each other.
 
+---
+## Wednesday 9.09.2020
+Bei einer 1 zu N beziehung steht der Schlüssel von(1) als Fremdschlüssel in (N)
