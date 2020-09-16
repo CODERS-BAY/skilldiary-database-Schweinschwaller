@@ -123,6 +123,7 @@ city: Steyr<br>
 The Problem with the first normal form is that, there can be redundancy. So you need the secound normal form.
 
 By the secound normal form the attibutes respectively to the keyattibute.
+Eine Relation ist in 2NF, wenn sie in 1NF ist und jedes nicht dem Schlüssel angehörende Attribut voll funktional abhängig ist vom Gesamtschlüssel.
 
 In the third normal form the attibutes that not keys are independently to each other.
 
@@ -132,3 +133,47 @@ In the third normal form the attibutes that not keys are independently to each o
 At a 1 to N relationship you can have to put the primekey form the (1)side in the (N)side as Foreign key 
 
 if you Assiatative tabel a tabel you can use the 2 Foreign key as prime key 
+
+---
+## Wednesday 16.09.2020
+
+Object oriented DBMs​ - No SQL​
+The goal of object-oriented databases is to be able to store the objects of the programming language, without reshaping or disassembling them.​
+Object databases are used to store objects directly, without having to worry too much about normalization of ID referencing.​
+The database itself takes care of the assignment of unique IDs to the stored objects and the assignment of objects to one another.​
+This means that the individual linked objects can still be addressed directly via methods even after they have been saved.​
+Object databases shows thier strengths with very complex problems.​
+If you have many simple queries, they are slower compared to typical relational systems.​
+
+No SQL​ (Not only SQL) ​
+NoSQL brefers to databases that follow a non-relational approach​
+NoSQL-systems work with versioning of data and conversions in the context of background processes​
+BASE ​(Basically Available, Soft State, Eventually Consistent) ​
+Instead of ACID ​(Atomicity, Consistency, Isolation, Durability)   ​
+With BASE, the focus is on the availability and less on the consistency of the data.​
+The data may just be consistent or, to put it optimistically, almost always consistent. ​
+
+Key/Value - database systems
+A key-value store is a database which uses an array of keys where each key is associated with only one value in a collection. ​
+It is quite similar to a dictionary or a map data structure. Key-value stores can be considered as the most primary and the simplest version of all the databases​
+
+Key/Value - database systems​
+Key/Value-Systems has a key and value scheme​.
+These keys can be divided into namespaces and databases.​
+The values of the system can also contain lists, sets or hashes.​
+
+Column-oriented database systems​
+This arrangement of the columns has advantages. ​
+During the reading process of data, no unnecessary information is read, instead only the information that has been selected to speed up read access.​
+The writing process is just as quick when it comes to a single column.​
+
+Document-oriented databases​
+A document database is a type of nonrelational database that is designed to store and query data as JSON-like documents.​
+The data in a document is stored in the form of key / value pairs, so it consists of a number of named key fields, each of which is assigned a specific value. ​
+Arrays are also possible as values, not just atomic values.​
+
+Graph model and systems​
+Graphs are used to represent a diversity of problems through nodes, edges and their relationships.​
+Examples: ​
+Navigation system, saves the road maps in the form of a graph.​
+The structure of the internet with links to the pages can be mapped with a graph model.​
