@@ -428,3 +428,162 @@ key:    Pilot_SVN: int
         Geburtsdatum: timestamp
         Berechtigung: varchar
 </pre>
+
+---
+## Wednesday 30.09.2020
+
+SQL
+
+CREATE TABLE Passenger (
+	Passenger_NR bigint PRIMARY KEY,
+	First_Name varchar(32),
+    Sure_Name varchar(32),
+	Sex boolean,
+	Titel varchar(32)
+    );
+
+INSERT INTO `passenger`(`Passenger_NR`, `First_Name`, `Sure_Name`, `Sex`, `Titel`) VALUES ('10','Georg','Arbeithuber',true,'Pr.')
+
+---
+## Wednesday 07.10.2020
+
+SELECT * FROM `aircraft` WHERE `Aircraft_Name` IS NOT NULL;
+Show all aircrafts with a name
+<pre>
+Internationale_ID  |  Airline_ID  |  Installation_Date  |  Aircraft_Name
+ADE1592AD23           1322158        2020-10-01            WarWick
+PON18298QWE21         5511           2010-07-15            Yuumi
+</pre>
+
+UPDATE `aircraft` SET `Airline_ID`=1234 WHERE `Aircraft_Name`='WarWick';
+change all Airline_ID by aircraft where the name is WarWick to 1234
+<pre>
+Internationale_ID  |  Airline_ID  |  Installation_Date  |  Aircraft_Name
+ADE1592AD23           1234           2020-10-01            WarWick
+PON18298QWE21         5511           2010-07-15            Yuumi
+</pre>
+
+UPDATE `aircraft` SET `Airline_ID`=1234;
+change all Airline_ID to 1234
+<pre>
+Internationale_ID  |  Airline_ID  |  Installation_Date  |  Aircraft_Name
+ADE1592AD23           1234           2020-10-01            WarWick
+PON18298QWE21         1234           2010-07-15            Yuumi
+</pre>
+
+INSERT INTO `aircraft` (`Internationale_ID`, `Airline_ID`, `Installation_Date`, `Aircraft_Name`) VALUES ('9999', '1111', '2020-10-10', 'TEST');
+add an aircraft
+<pre>
+Internationale_ID  |  Airline_ID  |  Installation_Date  |  Aircraft_Name
+9999                  1111           2020-10-10            TEST
+ADE1592AD23           4321           2020-10-01            WarWick
+PON18298QWE21         1234           2010-07-15            Yuumi
+</pre>
+
+DELETE FROM `aircraft` WHERE `Aircraft_Name` = 'TEST' AND `Airline_ID` = 1111 OR`Internationale_ID` = 9999
+remove all aircrafts that have the name TEST and is in the airline 1111 or have the internationale ID of 9999
+<pre>
+Internationale_ID  |  Airline_ID  |  Installation_Date  |  Aircraft_Name
+ADE1592AD23           4321           2020-10-01            WarWick
+PON18298QWE21         1234           2010-07-15            Yuumi
+</pre>
+
+ALTER TABLE bording_card ADD FOREIGN KEY (Passenger_NR) REFERENCES passenger(Passenger_NR)
+ALTER TABLE bording_card ADD FOREIGN KEY (Flight_ID) REFERENCES flight(Flight_ID)
+ALTER TABLE change the table 
+ADD FOREIGN KEY adds an ForeignKey (the bracket are importent)
+REFERENCES is the freference tabel for the key
+
+
+CREATE TABLE distance (
+	Port_1_ID varchar(8) NOT NULL,
+    Port_2_ID varchar(8) NOT NULL,
+    distance_km bigint,
+    PRIMARY KEY (Port_1_ID, Port_2_ID),
+    FOREIGN KEY (Port_1_ID) REFERENCES Airport(Port_ID),
+    FOREIGN KEY (Port_2_ID) REFERENCES Airport(Port_ID)
+);
+Create a table were Port_1_ID and Port_2_ID are the Primary key and they are Foreign Keys
+
+
+ALTER TABLE bording_card RENAME TO boarding_card
+change the name of the table
+
+SELECT * FROM `aircraft`
+<pre>
+Internationale_ID  |  Airline_ID  |  Installation_Date  |  Aircraft_Name
+5555                  5555           2020-08-02            DBMS - BDSM
+6666                  4444           2020-07-02            Help ME
+7777                  3333           2020-01-02            Tree
+8888                  2222           2020-10-02            Solitär
+9999                  1111           2020-10-01            TEST
+ADE1592AD23           4321           2020-10-01            WarWick
+PON18298QWE21         1234           2010-07-15            Yuumi
+</pre>
+
+
+SELECT * FROM `aircraft` WHERE `Aircraft_Name`LIKE 'W%'
+all Aircraft name that have a W in there name
+<pre>
+Internationale_ID  |  Airline_ID  |  Installation_Date  |  Aircraft_Name
+ADE1592AD23           4321           2020-10-01            WarWick
+</pre>
+
+SELECT `Aircraft_Name` FROM `aircraft` WHERE `Aircraft_Name`LIKE 'T%'
+all Aircraft name that have a T in there name
+<pre>
+Aircraft_Name
+Tree
+TEST
+</pre>
+
+SELECT `Aircraft_Name` FROM `aircraft` WHERE `Aircraft_Name`NOT LIKE 'T%'
+All Aircraft Name that don't have a t in the name
+<pre>
+Aircraft_Name
+DBMS - BDSM
+Help ME
+Solitär
+WarWick
+Yuumi
+</pre>
+
+SELECT * FROM `aircraft` WHERE `Installation_Date` BETWEEN '2010-10-10' AND '2030-10-10'
+all aircraft that were installed between 2010-10-10 and 2030-10-10
+<pre>
+Internationale_ID  |  Airline_ID  |  Installation_Date  |  Aircraft_Name
+5555                  5555           2020-08-02            DBMS - BDSM
+6666                  4444           2020-07-02            Help ME
+7777                  3333           2020-01-02            Tree
+8888                  2222           2020-10-02            Solitär
+9999                  1111           2020-10-01            TEST
+ADE1592AD23           4321           2020-10-01            WarWick
+</pre>
+
+SELECT * FROM `aircraft` ORDER BY `Aircraft_Name` DESC
+<pre>
+Internationale_ID  |  Airline_ID  |  Installation_Date  |  Aircraft_Name
+PON18298QWE21         1234           2010-07-15            Yuumi
+ADE1592AD23           4321           2020-10-01            WarWick
+7777                  3333           2020-01-02            Tree
+9999                  1111           2020-10-01            TEST
+8888                  2222           2020-10-02            Solitär
+6666                  4444           2020-07-02            Help ME
+5555                  5555           2020-08-02            DBMS - BDSM
+</pre>
+
+SELECT * FROM `aircraft` ORDER BY `Aircraft_Name`
+<pre>
+Internationale_ID  |  Airline_ID  |  Installation_Date  |  Aircraft_Name
+5555                  5555           2020-08-02            DBMS - BDSM
+6666                  4444           2020-07-02            Help ME
+8888                  2222           2020-10-02            Solitär
+9999                  1111           2020-10-01            TEST
+7777                  3333           2020-01-02            Tree
+ADE1592AD23           4321           2020-10-01            WarWick
+PON18298QWE21         1234           2010-07-15            Yuumi
+</pre>
+
+
+Bewerbungs Theme:
+https://themeforest.net/item/watson-vcard-resume-cv-portfolio-template/22526409
