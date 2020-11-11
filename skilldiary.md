@@ -445,7 +445,7 @@ CREATE TABLE Passenger (
 INSERT INTO `passenger`(`Passenger_NR`, `First_Name`, `Sure_Name`, `Sex`, `Titel`) VALUES ('10','Georg','Arbeithuber',true,'Pr.')
 
 ---
-## Wednesday 07.10.2020
+## Wednesday 07|14|21  .10.2020
 
 SELECT * FROM `aircraft` WHERE `Aircraft_Name` IS NOT NULL;
 Show all aircrafts with a name
@@ -584,6 +584,25 @@ ADE1592AD23           4321           2020-10-01            WarWick
 PON18298QWE21         1234           2010-07-15            Yuumi
 </pre>
 
+---
+## Wednesday 28.10.2020
+DDL	Data Definition Logic
+	- Create
+	- Drop
+	- Alter
+DML	Data Manipulation Logic
+	- Insert
+	- Delete
+DCL	Data Control Logic
+	- 
+---
+## Wednesday 4.11.2020
 
-Bewerbungs Theme:
-https://themeforest.net/item/watson-vcard-resume-cv-portfolio-template/22526409
+Parallel Transaktion have the same start end end time
+
+If an transaktion did not successful exicutet, rollback undo all other SQL commands
+
+
+Concurrency Datenconsitenz
+ACID (Atomicity, Consistency, Isolation, Durability)  
+
