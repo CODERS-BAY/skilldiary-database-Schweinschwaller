@@ -606,7 +606,13 @@ Parallel Transaktion have the same start end end time
 
 If an transaktion did not successful exicutet, rollback undo all other SQL commands
 
-
 Concurrency Datenconsitenz
 ACID (Atomicity, Consistency, Isolation, Durability)  
 
+---
+## Wednesday 18.11.2020
+
+Metadata
+
+https://www.youtube.com/watch?v=-YpwsdRKt8Q&t=34s
+https://www.youtube.com/watch?v=7FeqF1-Z1g0&t=5s
